@@ -71,8 +71,8 @@
                     if($deletenum == $row["id"]){    //削除番号と投稿番号が一致したとき 
                         $id=$deletenum;
                         $sql="DELETE FROM board3 WHERE id=:id";     //特定の番号を削除
-	                    $stmt=$pdo->prepare($sql);
-	                    $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+	                $stmt=$pdo->prepare($sql);
+	                $stmt->bindParam(":id", $id, PDO::PARAM_INT);
                         $stmt->execute();
                     }
                 }   
